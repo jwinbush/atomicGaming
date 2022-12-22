@@ -104,13 +104,10 @@ const fetchGamesList = (data) => {
     const e = data.results; // Each "e" is an object containing information of a game
     for (let i = 0; i < e.length; i++) {
         gameList.innerHTML += `
-<section class="new container" id="most">
-    <!--Content-->
-    <div class="new-content ">
-        <!--Box 1-->
+    
         <div class="box">
-            <img class="screenshot" src="${e[i].short_screenshots[0].image}" alt="screenshot of game" />            
-                <div class="box-text ">
+            <img src="${e[i].short_screenshots[0].image}" alt="screenshot of game">            
+                <div class="box-text">
                     <h2>${e[i].name}</h2>
                     <h3>${e[i].released}</h3>
                     <div class="rating-download ">
@@ -122,8 +119,7 @@ const fetchGamesList = (data) => {
                     </div>
                 </div>
         </div>
-    </div>
-</section>
+   
     `;
         movieItem = document.querySelectorAll(".movie-list");
         setTimeout(function() {
@@ -137,8 +133,7 @@ const fetchTrendingList = (data) => {
     const e = data.results; // Each "e" is an object containing information of a game
     for (let i = 0; i < e.length; i++) {
         gameList.innerHTML += `
-<div class="swiper-wrapper ">
-    <div class="swiper-slide ">
+
         <div class="box">
             <img src="${e[i].short_screenshots[0].image}" alt="screenshot of game" />            
             <div class="box-text ">
@@ -153,8 +148,6 @@ const fetchTrendingList = (data) => {
                 </div>
             </div>
         </div>
-    </div>
-</div>
  
     `;
         movieItem = document.querySelectorAll(".movie-list");

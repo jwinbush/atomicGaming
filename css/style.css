@@ -58,6 +58,12 @@ header {
     z-index: 100;
 }
 
+.new-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(240px, 20px));
+    gap: 1.2rem;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -358,12 +364,6 @@ header {
 
 .box-btn .bx:hover {
     background: rgb(19, 19, 19);
-}
-
-.new-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
-    gap: 1.2rem;
 }
 
 .next-page {
@@ -700,4 +700,10 @@ h3 span:nth-child(2) {
     100% {
         clip-path: var(--clip-four);
     }
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(240px, 20px));
+    gap: 1.2rem;
 }

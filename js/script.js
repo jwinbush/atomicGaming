@@ -14,6 +14,34 @@ document.querySelector('#bell-icon').onclick = () => {
     bell.classList.toggle('active');
 }
 
+//Sidebar
+const sidebar = document.querySelector('.sidebar');
+const navItems = document.querySelectorAll('nav .nav-item');
+const toggle = document.querySelector('.sidebar .toggle');
+
+toggle.addEventListener('click', () => {
+
+    if (sidebar.className === 'sidebar')
+        sidebar.classList.add('open');
+    else
+        sidebar.classList.remove('open');
+
+});
+
+navItems.forEach(navItem => {
+
+    navItem.addEventListener('click', () => {
+
+        navItems.forEach(navItem => {
+            navItem.classList.remove('active');
+        });
+
+        navItem.classList.add('active');
+
+    });
+
+});
+
 //Swiper//
 var swiper = new Swiper(".trending-content", {
     slidesPerView: 1,

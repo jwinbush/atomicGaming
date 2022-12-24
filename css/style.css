@@ -186,7 +186,7 @@ header {
 }
 
 .sidebar.open {
-    width: 300px;
+    width: 295px;
 }
 
 .sidebar .hero {
@@ -203,6 +203,10 @@ header {
     width: 56px;
     transition: .4s;
     border-radius: 5px;
+}
+
+.sidebar .hero img:hover {
+    transform: scale(1.05);
 }
 
 .sidebar.open .hero img {
@@ -258,15 +262,16 @@ header {
 }
 
 .sidebar nav .nav-item.active {
-    background: #898989 !important;
+    background-image: linear-gradient(to right, #012709, #01dc2d);
 }
 
 .sidebar nav .nav-item:hover {
-    background: rgba(255, 255, 255, 0.337);
+    background-image: linear-gradient(to right, #000000, #494949);
 }
 
 .sidebar nav .nav-item i {
     font-size: 20px;
+    color: white;
 }
 
 .sidebar nav .nav-item span {
@@ -308,7 +313,7 @@ header {
     text-align: center;
     border-radius: 50%;
     padding: 2px 0 2px 2px;
-    background: linear-gradient( 90deg, transparent 50%, rgba(10, 10, 10, .65) 50%);
+    background-image: linear-gradient(to right, #00000090, #8787877b);
 }
 
 .sidebar.open .toggle {
@@ -867,7 +872,7 @@ h3 span:nth-child(2) {
 
 .movie-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, max(220px, 20px));
+    grid-template-columns: repeat(auto-fit, max(252px, 20px));
     gap: 1.2rem;
     justify-content: center;
 }

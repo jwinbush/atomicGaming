@@ -1,8 +1,6 @@
 let menu = document.querySelector('.menu-icon');
-let navbar = document.querySelector('.menu');
 
 menu.onclick = () => {
-    navbar.classList.toggle('active')
     menu.classList.toggle('move');
     bell.classList.remove('active');
 
@@ -17,7 +15,7 @@ document.querySelector('#bell-icon').onclick = () => {
 //Sidebar
 const sidebar = document.querySelector('.sidebar');
 const navItems = document.querySelectorAll('nav .nav-item');
-const toggle = document.querySelector('.sidebar .toggle');
+const toggle = document.querySelector('.menu-icon');
 
 toggle.addEventListener('click', () => {
 

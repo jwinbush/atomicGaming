@@ -180,9 +180,10 @@ header {
     background: rgba(10, 10, 10, .65);
     box-shadow: 0 8px 32px rgb(2 4 24);
     border-right: 2px solid rgba(255, 255, 255, .09);
-    transition: .4s ease-in-out;
+    transition: .5s;
     position: fixed;
     z-index: 9999;
+    margin: -15px 0;
 }
 
 .sidebar.open {
@@ -350,7 +351,7 @@ header {
     font-size: 1.8rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
     .menu img {
         width: 60%;
     }
@@ -359,6 +360,12 @@ header {
     }
     .navbar a:hover {
         font-size: 105%;
+    }
+    .sidebar {
+        width: 120px;
+    }
+    .sidebar.open {
+        width: 100%;
     }
 }
 

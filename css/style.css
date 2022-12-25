@@ -444,7 +444,7 @@ header {
 .heading .bx {
     font-size: 21px;
     color: var(--text-color);
-    background: var(--main-color);
+    background-image: linear-gradient(to left, #01dc2d, #012709);
     padding: 10px;
     border-radius: 5rem;
 }

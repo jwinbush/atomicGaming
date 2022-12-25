@@ -31,7 +31,7 @@ InitializeDate();
 
 const fetchNewGames = async() => {
     try {
-        gameList.innerHTML = `<img src="/img/loading.gif" alt="" />`;
+        gameList.innerHTML = `<img src="/img/loading.gif" alt="" /`;
         const response = await fetch(
             `https://api.rawg.io/api/games?key=${key}&dates=${threeMonthsAgo},${today}&ordering=-rating`
         );
@@ -128,61 +128,5 @@ const fetchGamesList = (data) => {
     }
 };
 fetchNewGames();
-
-const fetchTrendingList = (data) => {
-    const e = data.results; // Each "e" is an object containing information of a game
-    for (let i = 0; i < e.length; i++) {
-        gameList.innerHTML += `
-
-        <div class="box">
-            <img src="${e[i].short_screenshots[0].image}" alt="screenshot of game" />            
-            <div class="box-text ">
-                <h2>${e[i].name}</h2>
-                <h3>${e[i].released}</h3>
-                <div class="rating-download ">
-                    <div class="rating ">
-                        <i class="bx bxs-star "></i>
-                        <span>${e[i].rating}</span>
-                    </div>
-                    <a href="#" class="box-btn "><i class="bx bx-down-arrow-alt "></i></a>
-                </div>
-            </div>
-        </div>
- 
-    `;
-        movieItem = document.querySelectorAll(".movie-list");
-        setTimeout(function() {
-            movieItem[i].classList.remove("fade");
-        }, 100);
-    }
-};
 fetchTopGames();
-
-const fetchUpcomingList = (data) => {
-    const e = data.results; // Each "e" is an object containing information of a game
-    for (let i = 0; i < e.length; i++) {
-        gameList.innerHTML += `
-
-        <div class="box">
-            <img src="${e[i].short_screenshots[0].image}" alt="screenshot of game" />            
-            <div class="box-text ">
-                <h2>${e[i].name}</h2>
-                <h3>${e[i].released}</h3>
-                <div class="rating-download ">
-                    <div class="rating ">
-                        <i class="bx bxs-star "></i>
-                        <span>${e[i].rating}</span>
-                    </div>
-                    <a href="#" class="box-btn "><i class="bx bx-down-arrow-alt "></i></a>
-                </div>
-            </div>
-        </div>
- 
-    `;
-        movieItem = document.querySelectorAll(".movie-list");
-        setTimeout(function() {
-            movieItem[i].classList.remove("fade");
-        }, 100);
-    }
-};
 fetchUpcomingGames();

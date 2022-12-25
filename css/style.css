@@ -665,6 +665,7 @@ h3 {
     font-size: 1.2rem;
     text-transform: uppercase;
     width: 100%;
+    margin-left: 10px;
     /* -webkit-box-reflect: below -14px linear-gradient(transparent, #bcbcbc); */
 }
 

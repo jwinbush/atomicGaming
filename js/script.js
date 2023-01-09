@@ -6,12 +6,6 @@ menu.onclick = () => {
 
 }
 
-let bell = document.querySelector('.notification');
-
-document.querySelector('#bell-icon').onclick = () => {
-    bell.classList.toggle('active');
-}
-
 //Sidebar
 const sidebar = document.querySelector('.sidebar');
 const navItems = document.querySelectorAll('nav .nav-item');
